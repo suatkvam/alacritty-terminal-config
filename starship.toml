@@ -1,40 +1,36 @@
-# --- YENİ STARSHIP YAPILANDIRMASI ---
+# Add a blank line between prompts
+add_newline = true
 
-add_newline = true # Her prompt arasında bir satır boşluk bırakır
-
-# Prompt'un formatını belirliyoruz:
-# 1. Satır: Kullanıcı, Makine ve Dizin bilgisi
-# 2. Satır: $ işareti
+# Define the prompt format:
+# 1st line: username, hostname, and directory
+# 2nd line: command prompt character
 format = """
 [┌─](cyan)\
 [$username@$hostname](magenta)\
 [$directory](cyan)
 [└─](cyan)$character"""
 
-# Kullanıcı adı ayarları
+# Username settings
 [username]
-style_user = "#a0e1ef"         # Ice temasına uygun buz mavisi
-# DEĞİŞİKLİK: Root rengi "kalın kırmızı" olarak ayarlandı.
-style_root = "bold red"        # root olduğunda kalın kırmızı
+style_user = "#a0e1ef"        # Ice blue color for normal users
+style_root = "bold red"       # Bold red color when root user
 format = "[$user]($style)"
 show_always = true
 
-# Makine adı ayarları
+# Hostname settings
 [hostname]
-ssh_only = false
+ssh_only = false              # Show hostname even if not SSH session
 style = "magenta"
 format = "[$hostname]($style) "
-trim_at = "."
+trim_at = "."                 # Trim hostname at first dot
 disabled = false
 
-# Dizin (klasör) ayarları
+# Directory settings
 [directory]
-style = "cyan bold" # Klasör yolunu camgöbeği (cyan) ve kalın yapar
-read_only = " 󰌾" # Sadece okunabilir klasörler için kilit ikonu
+style = "cyan bold"           # Cyan bold style for directory path
+read_only = " 󰌾"             # Lock icon for read-only directories
 
-# Komut satırı başındaki sembol ($)
+# Command prompt character settings
 [character]
-# Başarılı olduğunda parlak yeşil yerine beyaz ($) işareti
-success_symbol = "[\\$](bold white) "
-# Hata olduğunda kırmızı ($) işareti
-error_symbol = "[\\$](bold red) "
+success_symbol = "[\\$](bold white) "  # White $ on success
+error_symbol = "[\\$](bold red) "      # Red $ on error
