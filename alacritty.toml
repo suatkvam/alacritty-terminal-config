@@ -10,30 +10,29 @@ bold = { family = "JetBrainsMono Nerd Font" }
 italic = { family = "JetBrainsMono Nerd Font" }
 
 [colors.primary]
-background = "#1e2a33"
-foreground = "#cddfe4"
+background = "#1e2a33"  # Background color - Dark Blue Gray
+foreground = "#cddfe4"  # Foreground color - Light Gray Blue
 
 [colors.cursor]
-text = "CellBackground"
-cursor = "#88c0b0"
+text = "CellBackground" # Cursor text color matches cell background for contrast
+cursor = "#88c0b0"      # Cursor color - Soft Cyan Green
 
 [colors.normal]
-black   = "#1e2a33"
-red     = "#c27d7d"
-green   = "#9bd6c3"
-yellow  = "#cfcfa0"
-blue    = "#81a1c1"
-magenta = "#b48ead"
-cyan    = "#88c0b0"
-white   = "#cddfe4"
+black   = "#1e2a33"  # Black - Dark Blue Gray
+red     = "#c27d7d"  # Red - Muted Rose
+green   = "#9bd6c3"  # Green - Soft Mint Green
+yellow  = "#cfcfa0"  # Yellow - Pale Olive
+blue    = "#81a1c1"  # Blue - Soft Steel Blue
+magenta = "#b48ead"  # Magenta - Dusty Purple
+cyan    = "#88c0b0"  # Cyan - Soft Cyan Green
+white   = "#cddfe4"  # White - Light Gray Blue
 
 [colors.bright]
-black   = "#3b4d57"
-red     = "#d47777"
-green   = "#bdeee0"
-yellow  = "#f1f1b5"
-blue    = "#a3c0df"
-magenta = "#d2a4d6"
-cyan    = "#a1d9cb"
-white   = "#dff4f8"
-
+black   = "#3b4d57"  # Bright Black - Slate Gray
+red     = "#d47777"  # Bright Red - Warm Rose
+green   = "#bdeee0"  # Bright Green - Light Mint
+yellow  = "#f1f1b5"  # Bright Yellow - Soft Butter
+blue    = "#a3c0df"  # Bright Blue - Light Steel Blue
+magenta = "#d2a4d6"  # Bright Magenta - Light Lavender
+cyan    = "#a1d9cb"  # Bright Cyan - Light Aqua Green
+white   = "#dff4f8"  # Bright White - Very Light Blue
