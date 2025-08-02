@@ -1,0 +1,40 @@
+# --- YENİ STARSHIP YAPILANDIRMASI ---
+
+add_newline = true # Her prompt arasında bir satır boşluk bırakır
+
+# Prompt'un formatını belirliyoruz:
+# 1. Satır: Kullanıcı, Makine ve Dizin bilgisi
+# 2. Satır: $ işareti
+format = """
+[┌─](cyan)\
+[$username@$hostname](magenta)\
+[$directory](cyan)
+[└─](cyan)$character"""
+
+# Kullanıcı adı ayarları
+[username]
+style_user = "#a0e1ef"         # Ice temasına uygun buz mavisi
+# DEĞİŞİKLİK: Root rengi "kalın kırmızı" olarak ayarlandı.
+style_root = "bold red"        # root olduğunda kalın kırmızı
+format = "[$user]($style)"
+show_always = true
+
+# Makine adı ayarları
+[hostname]
+ssh_only = false
+style = "magenta"
+format = "[$hostname]($style) "
+trim_at = "."
+disabled = false
+
+# Dizin (klasör) ayarları
+[directory]
+style = "cyan bold" # Klasör yolunu camgöbeği (cyan) ve kalın yapar
+read_only = " 󰌾" # Sadece okunabilir klasörler için kilit ikonu
+
+# Komut satırı başındaki sembol ($)
+[character]
+# Başarılı olduğunda parlak yeşil yerine beyaz ($) işareti
+success_symbol = "[\\$](bold white) "
+# Hata olduğunda kırmızı ($) işareti
+error_symbol = "[\\$](bold red) "
